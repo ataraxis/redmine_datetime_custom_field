@@ -91,7 +91,7 @@ function nowShortcut(cf_id, show_hours) {
   year  = now.getFullYear()
   month = (now.getMonth() + 1).toString().padStart(2, "0")
   day   = now.getDate().toString().padStart(2, "0")
-  var now_str = day + "/" + month + "/" + year
+  var now_str = year + "-" + month + "-" + day
   if(show_hours == '1'){now_str += " " + now.getHours().toString().padStart(2, "0") + ":" + now.getMinutes().toString().padStart(2, "0")}
   $("input#issue_custom_field_values_"+cf_id).val(now_str)
 }
